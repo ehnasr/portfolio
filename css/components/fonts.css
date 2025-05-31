@@ -1,0 +1,212 @@
+/* main */
+
+body {
+  font-family: var(--font-overpass);
+  font-size: var(--size-base);
+}
+
+em,
+strong,
+span {
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* utlities */
+
+.btn {
+  font-family: var(--font-jet-brains);
+  font-size: var(--size-xxs);
+  font-weight: 500;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+/* header */
+
+.header__section h1 {
+  font-family: var(--font-overpass);
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: var(--size-5xl);
+}
+
+.header__section h2,
+.header__nav i {
+  font-weight: 400;
+  font-family: var(--font-jet-brains);
+  font-size: var(--size-xl);
+}
+
+.header__section p {
+  font-size: var(--size-s);
+}
+
+/* about */
+
+.section__about p {
+  text-align: center;
+}
+
+/* portfolio */
+
+.project__info h2,
+.project__info h3 {
+  font-family: var(--font-overpass);
+  text-transform: capitalize;
+}
+
+.project__info h2 {
+  font-size: var(--size-base);
+}
+
+.project__info h3 {
+  font-size: var(--size-xs);
+}
+
+.project__info p {
+  font-size: var(--size-xxs);
+  line-height: 1.1;
+}
+
+.tech__stack li {
+  list-style: none;
+  font-family: var(--font-jet-brains);
+  font-size: var(--size-xxs);
+}
+
+/* footer */
+
+.footer__msg {
+  font-family: var(--font-jet-brains);
+}
+
+/* short */
+/* @media (max-height: 550px) {} */
+/* xs */
+/* @media (min-width: 475px) {} */
+/* sm */
+/* @media (min-width: 640px) {} */
+/* md */
+@media (min-width: 768px) {
+  .section__about p {
+    text-align: left;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  /* utilities */
+
+  .btn {
+    font-size: var(--size-base);
+  }
+
+  /* header */
+
+  .header__section h1 {
+    font-size: var(--size-7xl);
+  }
+
+  .header__section h2,
+  .header__nav i {
+    font-size: var(--size-4xl);
+  }
+
+  .header__section p {
+    font-size: var(--size-xl);
+  }
+
+  /* portfolio */
+
+  .project__info h2 {
+    font-size: var(--size-2xl);
+  }
+
+  .portfolio__group .project__info h2 {
+    font-size: var(--size-s);
+  }
+
+  .project__info h3 {
+    font-size: var(--size-base);
+  }
+
+  .portfolio__group .project__info h3 {
+    font-size: var(--size-xs);
+  }
+
+  .project__info p {
+    font-size: var(--size-s);
+  }
+
+  .portfolio__group .project__info p {
+    font-size: var(--size-xs);
+  }
+
+  .tech__stack li {
+    font-size: var(--size-s);
+  }
+
+  .portfolio__group .tech__stack li {
+    font-size: var(--size-xs);
+  }
+}
+
+/* xl */
+/* @media (min-width: 1280px) {} */
+/* 2xl */
+@media (min-width: 1536px) {
+  /* utilities */
+
+  .btn {
+    font-size: var(--size-xl);
+  }
+
+  /* header */
+
+  .header__section h1 {
+    font-size: var(--size-10xl);
+  }
+
+  .header__section h2,
+  .header__nav i {
+    font-size: var(--size-6xl);
+  }
+
+  .header__section p {
+    font-size: var(--size-3xl);
+  }
+
+  /* portfolio */
+
+  .project__info h2 {
+    font-size: var(--size-5xl);
+  }
+
+  .portfolio__group .project__info h2 {
+    font-size: var(--size-3xl);
+  }
+
+  .project__info h3 {
+    font-size: var(--size-2xl);
+  }
+
+  .portfolio__group .project__info h3 {
+    font-size: var(--size-l);
+  }
+
+  .project__info p {
+    font-size: var(--size-xl);
+  }
+
+  .portfolio__group .project__info p {
+    font-size: var(--size-l);
+  }
+
+  .tech__stack li {
+    font-size: var(--size-xl);
+  }
+
+  .portfolio__group .tech__stack li {
+    font-size: var(--size-l);
+  }
+}

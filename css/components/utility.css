@@ -1,0 +1,83 @@
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: white;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  border: 2px solid white;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--clr-bright-gold);
+  background-color: white;
+  border: 2px solid white;
+  box-shadow: 0 0 8px white;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  /* border: 1px solid white; */
+}
+
+.separator {
+  margin-top: 1rem;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
+/* short */
+/* @media (max-height: 550px) {} */
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    min-width: 475px;
+  }
+}
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    min-width: 640px;
+  }
+}
+/* md */
+@media (min-width: 768px) {
+  .container {
+    min-width: 768px;
+  }
+}
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    min-width: 1024px;
+  }
+  .separator {
+    margin-top: 2rem;
+  }
+}
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    min-width: 1280px;
+  }
+}
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    min-width: 1536px;
+    max-width: 2000px;
+  }
+}

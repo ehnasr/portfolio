@@ -1,0 +1,11 @@
+import { initDarkMode } from "./components/dark-mode";
+import { initHeader } from "./components/header";
+import { initPortfolio } from "./components/portfolio";
+import { initFooter } from "./components/footer";
+import { initAudio } from "./components/audio";
+
+initDarkMode();
+initHeader();
+initPortfolio();
+initFooter();
+initAudio();

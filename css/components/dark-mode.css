@@ -1,0 +1,9 @@
+html.dark-mode {
+  --clr-dark-gold: #000;
+  --clr-bright-gold: #222;
+  --clr-mute-gold: #e1e1e1;
+  --clr-mute-white: #9ba9bf;
+  --clr-mute-black: #9ba9bf;
+
+  scrollbar-color: var(--clr-mute-gold) var(--clr-mute-black);
+}

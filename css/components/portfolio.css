@@ -1,0 +1,197 @@
+/* ========== Portfolio Layout ========== */
+.portfolio {
+  width: 100%;
+}
+
+.portfolio__container,
+.portfolio__group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* ========== Project Images ========== */
+.container__project {
+  margin-top: 0.5rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+.portfolio img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+/* ========== Project Card ========== */
+.portfolio__project {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+/* ========== Overlay Info Panel ========== */
+.project__info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(1px);
+  color: transparent;
+  cursor: pointer;
+  gap: 15px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.project__shimmer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.portfolio__project:hover .project__shimmer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -250%;
+  opacity: 0.75;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0) 70%);
+  animation: shimmerMove 5s 0.3s;
+  pointer-events: none;
+}
+
+@keyframes shimmerMove {
+  0% {
+    left: -250%;
+  }
+  100% {
+    left: 150%;
+  }
+}
+
+/* Show info panel on hover */
+.portfolio__project:hover .project__info {
+  color: white;
+  transform: scaleX(1);
+}
+
+/* Children of info panel (text + tech) - initial state */
+.project__info > *,
+.tech__stack > * {
+  opacity: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  transform: translateX(-20px);
+  transition: none;
+}
+
+/* ========== Animated States ========== */
+.active__project * {
+  opacity: 1;
+}
+
+.active__project .project__info > *,
+.active__project .tech__stack > * {
+  transform: translateX(0);
+}
+
+.entering__project {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.leaving__project {
+  transition: none;
+}
+
+/* ========== Info Panel Heading ========== */
+.project__info h3 {
+  background-color: transparent;
+  border-radius: 150px;
+  padding: 0 7%;
+  width: fit-content;
+}
+
+.portfolio__project:hover .project__info h3 {
+  border: 2px solid white;
+}
+
+/* ========== Tech Stack ========== */
+.tech__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.tech__stack i {
+  position: relative;
+  top: 1px;
+  padding-right: 0.1em;
+}
+
+/* Tech Stack Hover Effects */
+.portfolio__project:hover .tech__stack li {
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.portfolio__project:hover .tech__stack li:hover,
+.portfolio__project:hover .project__info h3:hover {
+  background-color: white !important;
+  border: 2px solid white !important;
+  box-shadow: 0 0 8px white;
+  color: var(--clr-bright-gold);
+}
+
+/* ========== Responsive Layout ========== */
+@media (min-width: 1024px) {
+  .portfolio__container,
+  .portfolio__group {
+    gap: 0;
+  }
+
+  .portfolio__group .project__info {
+    gap: 10px;
+  }
+
+  .portfolio__container:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .portfolio__container:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .container__project {
+    margin-top: 0;
+    width: 50%;
+  }
+
+  .portfolio__group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+  }
+}
+
+/* ========== Future Media Queries ==========
+@media (max-height: 550px) {}
+@media (min-width: 475px) {}
+@media (min-width: 640px) {}
+@media (min-width: 768px) {}
+@media (min-width: 1280px) {}
+@media (min-width: 1536px) {}
+========================================== */

@@ -1,0 +1,140 @@
+#stars,
+#dust {
+  z-index: -99;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__section {
+  margin-top: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .header__arrow {
+  position: absolute;
+  bottom: 2em;
+} */
+
+.download {
+  background-color: var(--clr-mute-black);
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__h2::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 4px;
+  background-color: var(--clr-mute-gold);
+  margin-left: 4px;
+  animation: blink 0.5s infinite;
+}
+
+header h1 {
+  color: var(--clr-mute-black);
+  /* color: white; */
+}
+
+header p {
+  color: var(--clr-mute-white);
+}
+
+.header__nav {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+header i:hover {
+  cursor: pointer;
+}
+
+header .mouse {
+  border: clamp(2px, 0.3vw, 4px) solid var(--clr-mute-black);
+  width: clamp(22px, 1.5vw, 44px);
+  height: clamp(40px, 2vw, 80px);
+  position: absolute;
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+  bottom: 10%;
+  border-radius: clamp(10px, 1vw, 30px);
+}
+
+header .mouse-wheel {
+  position: absolute;
+  background-color: var(--clr-mute-black);
+  width: clamp(4px, 0.3vw, 10px);
+  height: clamp(4px, 0.3vw, 10px);
+  border-radius: 3px;
+  left: 50%;
+  transform: translate(-50%, 5px);
+  animation: wheel-scroll 2.5s infinite;
+}
+
+/* short */
+@media (max-height: 550px) {
+  header .mouse {
+    display: none;
+  }
+}
+/* xs */
+/* @media (min-width: 475px) {} */
+/* sm */
+/* @media (min-width: 640px) {} */
+/* md */
+/* @media (min-width: 768px) {} */
+/* lg */
+/* @media (min-width: 1024px) {} */
+/* xl */
+/* @media (min-width: 1280px) {} */
+/* 2xl */
+@media (min-width: 1536px) {
+  .header__arrow {
+    bottom: 5em;
+  }
+}
+
+@keyframes wheel-scroll {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, 5px);
+    height: clamp(10px, 1vw, 70px);
+  }
+  75% {
+    transform: translate(-50%, 20px);
+    opacity: 1;
+  }
+
+  100% {
+    /* opacity: 0; */
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
