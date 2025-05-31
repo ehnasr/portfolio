@@ -3,9 +3,11 @@ import { initHeader } from "./components/header";
 import { initPortfolio } from "./components/portfolio";
 import { initFooter } from "./components/footer";
 import { initAudio } from "./components/audio";
+import { injectSpeedInsights } from "@vercel/speed-insights";
 
 initDarkMode();
 initHeader();
 initPortfolio();
 initFooter();
 initAudio();
+injectSpeedInsights();
