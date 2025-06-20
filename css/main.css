@@ -11,6 +11,11 @@
 @import url(./components/footer.css);
 @import url(./components/fonts.css);
 
+@font-face {
+  font-family: Fifa26;
+  src: url(../public/fonts/fifa-26.otf.woff2);
+}
+
 :root {
   --clr-dark-gold: #b88325;
   --clr-bright-gold: #e2c158;
@@ -20,6 +25,7 @@
 
   --font-overpass: "Overpass", sans-serif;
   --font-jet-brains: "JetBrains Mono", sans-serif;
+  --font-fifa: "Fifa26", sans-serif;
 
   --size-xxs: 0.5rem;
   --size-xs: 0.75rem;

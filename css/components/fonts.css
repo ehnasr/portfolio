@@ -81,6 +81,10 @@ span {
   font-family: var(--font-jet-brains);
 }
 
+.footer__msg .year {
+  font-family: var(--font-fifa);
+}
+
 /* short */
 /* @media (max-height: 550px) {} */
 /* xs */
