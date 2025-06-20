@@ -13,7 +13,7 @@ footer {
   margin-bottom: 1rem;
 }
 
-.footer__msg *:hover {
+.footer__msg .day-time:hover {
   backdrop-filter: blur(2px);
 }
 
@@ -37,30 +37,40 @@ footer {
 }
 
 .day-time {
-  align-items: flex-start;
+  position: relative;
+  right: 6px;
+  bottom: 3px;
+  color: white;
+  align-items: center;
 }
 
 .year {
   align-items: flex-end;
 }
 
-.day,
-.time,
-.top-year,
+.top-year {
+  display: none;
+}
+
 .bottom-year {
-  letter-spacing: -2px;
+  position: absolute;
+  font-size: 96px;
+  z-index: -1;
+}
+
+.bottom-year {
+  letter-spacing: -6px;
 }
 
 .day {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .top-year {
   font-size: 24px;
 }
 
-.time,
-.bottom-year {
+.time {
   font-size: 32px;
 }
 
