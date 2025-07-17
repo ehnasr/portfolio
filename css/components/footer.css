@@ -13,10 +13,6 @@ footer {
   margin-bottom: 1rem;
 }
 
-.footer__msg *:hover {
-  backdrop-filter: blur(2px);
-}
-
 .footer__msg i {
   padding: 0 5px;
 }
