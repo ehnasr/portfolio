@@ -32,7 +32,8 @@ span {
 }
 
 .header__section h2,
-.header__nav i {
+.header__nav i,
+.connect i {
   font-weight: 400;
   font-family: var(--font-jet-brains);
   font-size: var(--size-xl);
@@ -112,7 +113,8 @@ span {
   }
 
   .header__section h2,
-  .header__nav i {
+  .header__nav i,
+  .connect i {
     font-size: var(--size-4xl);
   }
 
@@ -172,7 +174,8 @@ span {
   }
 
   .header__section h2,
-  .header__nav i {
+  .header__nav i,
+  .connect i {
     font-size: var(--size-6xl);
   }
 
